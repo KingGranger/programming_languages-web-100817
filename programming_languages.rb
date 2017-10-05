@@ -40,9 +40,9 @@ def reformat_languages(languages)
       attributes.each do |type, type_value|
         new_hash[language][type] = type_value
         new_hash[language][:style] = []
-        
+        new_hash[language][:style].push(styles)
       end
-      new_hash[language][:style].push(styles)
+    
     end
 
   end
