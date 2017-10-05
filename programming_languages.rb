@@ -28,16 +28,13 @@ languages = {
     :javascript => {
       :type => "interpreted"
     }
- 
+
   }
 }
 
 def reformat_languages(languages)
   new_hash = {}
-  languages.each{|styles, hash_lg| hash_lg.each do |language, attributes| 
-    new_hash[language] = {}
-    new_hash.uniq!
-  end }
+  languages.each{|styles, hash_lg| hash_lg.each{|language, attributes|new_hash[language] = {} }}
   binding.pry
   new_hash
 end
